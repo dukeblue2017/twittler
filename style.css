@@ -3,9 +3,26 @@ body {
 }
 
 .tweet {
-	text-align: center;
-	color: Aqua;
+	text-align: left;
+	font-family: Arial;
+	font-size: 150%;
+	color: black;
 	background-color: white;
-	padding-bottom: 10px;
+	margin-bottom: 10px;
+	width: 70%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 10px;
 
+}
+
+.button {
+	margin-bottom: 20%;
+
+}
+
+#tweetblock {
+	vertical-align: right;
+	background-color: black;
+	float: right;
 }
