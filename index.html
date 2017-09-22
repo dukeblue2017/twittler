@@ -6,6 +6,7 @@
     <link rel=stylesheet href="style.css"></stylesheet>
   </head>
   <body>
+    <div>Update</div>
     <script>
 
       $(document).ready(function(){
@@ -15,11 +16,12 @@
         var index = streams.home.length - 1;
         while(index >= 0){
           var tweet = streams.home[index];
-          var $tweet = $('<div></div>');
+          var $tweet = $('<div class=tweet></div>');
           $tweet.text('@' + tweet.user + ': ' + tweet.message);
           $tweet.appendTo($body);
           index -= 1;
         }
+
 
       });
 
