@@ -2,7 +2,7 @@ $(document).ready(function(){
   var $body = $('body');
   $body.html('');
 
-  var u = $('<div class=update>Update</div>')
+  var u = $('<div class=update>Double Click Anywhere to Load New Twittles</div>')
   u.appendTo($body);
 
   var index = streams.home.length - 1;
@@ -30,19 +30,17 @@ $(document).ready(function(){
 
   var loadNew = function() {
     console.log('running loadNew')
-    var index = streams.home.length-appeared;
-    while (index > appeared) {
-      var tweet = streams.home[index];
+    while (streams.home.length > appeared) {
+      var tweet = streams.home[appeared];
       var $tweet = $('<div class=tweet></div>');
       var d = new Date
       $tweet.text('@' + tweet.user + ': ' + tweet.message + ' ' + tweet.created_at);
       $tweet.prependTo($body);
-      index -= 1;
       appeared ++;
     }
   }
 
-  $('.update').on('click', function() {
+  $('html').on('dblclick', function() {
     console.log('hi')
     loadNew()
   });
