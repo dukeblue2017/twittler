@@ -11,7 +11,7 @@ $(document).ready(function(){
     var tweet = streams.home[index];
     var $tweet = $('<div class=tweet></div>');
     var d = new Date
-    $tweet.text('@' + tweet.user + ': ' + tweet.message + ' ' + d);
+    $tweet.text('@' + tweet.user + ': ' + tweet.message + ' - At ' + d);
     $tweet.appendTo($body);
     index -= 1;
   }
@@ -24,16 +24,11 @@ $(document).ready(function(){
     $(this).removeClass('highlight')
   });
 
-  $('.tweet').on('click', function() {
-    $(this).slideDown()
-  });
-
   var loadNew = function() {
-    console.log('running loadNew')
     while (streams.home.length > appeared) {
       var tweet = streams.home[appeared];
       var $tweet = $('<div class=tweet></div>');
-      var d = new Date
+      var d = new Date;
       $tweet.text('@' + tweet.user + ': ' + tweet.message + ' ' + tweet.created_at);
       $tweet.prependTo($body);
       appeared ++;
@@ -41,9 +36,15 @@ $(document).ready(function(){
   }
 
   $('html').on('dblclick', function() {
-    console.log('hi')
     loadNew()
   });
+
+
+  $('.tweet').on('click', function() {
+    console.log(streams.users.shawndrost)
+    $(this).slideToggle()
+  });
+
 
   
 
