@@ -29,4 +29,6 @@ body {
 	border-color: black;
 	margin-left: 30%;
 	margin-bottom: 50px;
+	margin-top: 20px;
+	position: static;
 }

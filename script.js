@@ -6,6 +6,7 @@ $(document).ready(function(){
   u.appendTo($body);
 
   var index = streams.home.length - 1;
+  var appeared = index
   while(index >= 0){
     var tweet = streams.home[index];
     var $tweet = $('<div class=tweet></div>');
@@ -26,5 +27,26 @@ $(document).ready(function(){
   $('.tweet').on('click', function() {
     $(this).slideDown()
   });
+
+  var loadNew = function() {
+    console.log('running loadNew')
+    var index = streams.home.length-appeared;
+    while (index > appeared) {
+      var tweet = streams.home[index];
+      var $tweet = $('<div class=tweet></div>');
+      var d = new Date
+      $tweet.text('@' + tweet.user + ': ' + tweet.message + ' ' + tweet.created_at);
+      $tweet.prependTo($body);
+      index -= 1;
+      appeared ++;
+    }
+  }
+
+  $('.update').on('click', function() {
+    console.log('hi')
+    loadNew()
+  });
+
+  
 
 });
