@@ -1,28 +1,32 @@
 body {
-	background-color: Aqua;
+	background-color: DeepSkyBlue;
 }
 
 .tweet {
 	text-align: left;
 	font-family: Arial;
-	font-size: 150%;
+	font-size: 80%;
 	color: black;
 	background-color: white;
 	margin-bottom: 10px;
-	width: 70%;
+	width: 40%;
 	padding-top: 5px;
 	padding-bottom: 5px;
-	margin-top: 10px;
-
+	margin-top: 20px;
+	margin-left: 30%;
 }
 
-.button {
-	margin-bottom: 20%;
 
+.highlight {
+	font-size: 120%;
 }
 
-#tweetblock {
-	vertical-align: right;
-	background-color: black;
-	float: right;
+.update {
+	color: black;
+	font-family: Arial;
+	font-size: 130%;
+	border-bottom-width: 50px;
+	border-color: black;
+	margin-left: 30%;
+	margin-bottom: 50px;
 }
