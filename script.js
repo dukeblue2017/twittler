@@ -1,6 +1,6 @@
 $(document).ready(function(){
   var $body = $('body');
-  $body.html('');
+  //$body.html('');
 
   var u = $('<div class=update>Double Click Anywhere to Load New Twittles</div>')
   u.appendTo($body);

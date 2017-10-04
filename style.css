@@ -3,6 +3,11 @@ body {
 
 }
 
+.google-pic {
+	height: 100px;
+	text-align: center;
+}
+
 .tweet {
 	text-align: left;
 	font-family: Arial;
